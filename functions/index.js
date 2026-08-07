@@ -402,6 +402,10 @@ export async function onRequest(context) {
 
   // --- 收集所有 </head> 注入内容（合并为一次替换） ---
   let headInjections = '';
+  // AdSense 站点验证标签
+  headInjections += `<meta name="google-adsense-account" content="ca-pub-5708344552035597">
+`;
+
 
   // 注入隐藏图标的 CSS
   if (S.home_hide_admin) {
